@@ -1,0 +1,6 @@
+writing application using network protocol stack & network API's is called network application programming
+these programs will communicate with programs either with the same machines or programs that are running on a different machine on a remote location
+
+switches and routers are networking devices that will connect one or more device to the other computers or other networking devices or connects other networks. 
+
+open system interconnect(OSA)
