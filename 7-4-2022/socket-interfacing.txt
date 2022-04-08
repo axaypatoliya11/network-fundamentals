@@ -1,0 +1,43 @@
+socket: socket represent end point , end link or end address in a network communication programming. 
+
+there are many n/w communication protocols supported by sockets. we can say that these socket systems are designed to support all the n/w communication protocols. because of the same reason socket system calls and their parameters are appeares to be generic in nature. 
+
+socket system call takes parameters such as socket structure and size(that represents the socket address size).
+
+each and every socket has 5 parameters.
+1) protocol communication
+2) IP address of the source(server)
+3) IP address of destination(client)
+4) port number of source
+5) port number of destination
+
+
+any network application program ends with client and server model.
+
+bind() system call binds the server socket with well known server and IP address. at this point server is said to be half binded. after bind server has to listen
+
+listen(): how many server are waiting for connection
+
+accept():
+
+
+#include<sys/types.h>
+#include<sys/socket.h>
+int socket(int family, int flag, int protocol);
+family: it will tell what type of a network protocol we want to use.
+AF_INET: address format internet
+
+flag: Sock_stream: connection oriented, connection less oriented
+
+in the IP header protocoal value is 0(zero).
+
+on successful execution socket call returns socket file descreptor(socdes).
+
+int bind(int socfd, struct socaddr *addr, int addr_length);
+structu soc_address{
+    sockeaddress_family;
+    socetaddress_data;
+
+}
+
+connect() system call is used by clinet program to initiate communication with server.

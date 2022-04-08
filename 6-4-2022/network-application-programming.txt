@@ -4,3 +4,29 @@ these programs will communicate with programs either with the same machines or p
 switches and routers are networking devices that will connect one or more device to the other computers or other networking devices or connects other networks. 
 
 open system interconnect(OSA)
+
+application layer has different application protocols(HTTP, ). this provides access to interact to the application. so that application packages can be trasferred to the next level. it decides which format data should be send to the reciever so that reciever can understand the data. session layer when recieves the packet from presentation layer, session layer establish a connection between sender and reciever nothing but creating a session between sender and reciever and also maintains the session, synchronize the session and terminates the session. presentation layer also takes care of encryption and descryption. and also reduces the packet size(compress the package). if because of some event session layer fails to transfer the packet, in next layer session did not need to start from begining it start from the point of interruption.
+
+packet transfered to transport level. it divides packet into small pieces.
+
+before sending the data to network data is in the network format. network layer will take segmented data from transport layer and converts into network packet. network layer has the IP address for the source and destination. all the routing will be done from here. it will find the shortest possible path to find transfer the packet(this process is called routing). all the routing done from the network layer. 
+
+first it will check whether data is error free or not. if any error is there then clears the error and transfers the data to next layer.
+
+data link: handles the physical addressing. 
+
+physical layer: converts in digital form network devices such as switchcase hub. and send to physical of reciever.
+
+
+using $ifconfig command we can view or change the network configurations. will also list active networking devices.
+
+after $ifconfig:::
+lo: loop config command.
+
+each machine has 127.0.0.1 loop back address(localhost)
+
+using a loop back address we can set the IP connection for the localhost.
+
+127.0.0.1 is called as a loop back address because we transfer the data to this address data will never go to network data loops in to local device.
+
+txqueuelen is used by respective network drivers.
