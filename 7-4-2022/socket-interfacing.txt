@@ -23,7 +23,9 @@ accept():
 
 #include<sys/types.h>
 #include<sys/socket.h>
+
 int socket(int family, int flag, int protocol);
+
 family: it will tell what type of a network protocol we want to use.
 AF_INET: address format internet
 

@@ -1,0 +1,2 @@
+in network there are many computers. they use different CPU's and different microcontrollers. few CPU's follow big inidian format, and few follow litte intian format to store integer data in the memory. TCP IP specify all the nodes in the network to follow network byte order. 
+

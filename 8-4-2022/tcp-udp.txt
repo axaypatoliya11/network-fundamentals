@@ -1,0 +1,26 @@
+tcp - establish connection between server and client before data communication
+    - slow
+    - service reliable
+        -in case of data lose provides automatic re-transmittion
+        - supports acknowledgement
+    - data gurantee
+    - 20-60 bytes
+    - supports byte straming data transfer
+    - no broadcast
+    - supports extensive error checking
+    - sequencing of data
+    - uses 3 way hand shaking for connection establishment
+      for connection closing uses 4 way hand shaking
+
+udp - no connection established
+    - faster
+    - not reliable
+        - no re-transmittion
+        - no acknowledgement
+    - no data gurantee
+    - 8 bytes
+    - does not supports byte straming data transfer
+    - broadcasting
+    - does not supports extensive error checking
+    - no sequencing of data
+    - no support for hand shaking
