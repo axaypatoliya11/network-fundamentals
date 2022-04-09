@@ -24,3 +24,6 @@ udp - no connection established
     - does not supports extensive error checking
     - no sequencing of data
     - no support for hand shaking
+
+
+3 way handshake:
