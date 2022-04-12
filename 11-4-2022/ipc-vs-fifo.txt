@@ -1,0 +1,2 @@
+IPC and FIFO supports streaming data transfer.
+

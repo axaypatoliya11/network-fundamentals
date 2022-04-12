@@ -1,0 +1,9 @@
+netstat -tulpn
+
+netstat is a command line tool which shows the complete detailed information of a computer system how your computer communication with other computers or other networking devices. will provide individual detailed network communication of your system. the information can be used for troubleshooting and doagnosis service.
+
+
+
+get servent() 
+
+this will read the file in root->/etc/services & then return a pointer to the next entry in the services file.

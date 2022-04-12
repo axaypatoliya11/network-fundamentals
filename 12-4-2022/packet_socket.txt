@@ -1,0 +1,18 @@
+AF_INET -> address format internet protocol
+
+packet_socket = socket(PF_PACKET, type, htons(ETH_P_ALL));
+PF_PACKET family used for sending raw data to the application.
+type could be raw of sock_dgram.
+    sock_raw packet includes link layer header
+    dgram packet 
+at physical link layer a standard packet structure followed based on ethernet
+
+
+
+PF_PACKET sends a packet interface at device level. PF_PACKETS are used for recieving raw data directly to the application user.
+
+struct sockadd_ll; (link layer) physical link layer protocol.
+
+struct
+
+while recieving packet is passing to link layer and stored in a structure called link layer.
