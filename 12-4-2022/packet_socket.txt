@@ -1,5 +1,7 @@
 AF_INET -> address format internet protocol
 
+
+
 packet_socket = socket(PF_PACKET, type, htons(ETH_P_ALL));
 PF_PACKET family used for sending raw data to the application.
 type could be raw of sock_dgram.
@@ -16,3 +18,14 @@ struct sockadd_ll; (link layer) physical link layer protocol.
 struct
 
 while recieving packet is passing to link layer and stored in a structure called link layer.
+
+
+setsockopt(int socket_id, int level, int optname, const void *optcal, socklen_t optlen);
+
+a request from socket level, a request from transport level, a request from network level.
+
+->add this code before binding in the server code if you want port to be reused.
+--> if(setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))){
+    perror("setsocket);
+    exit(EXIT_FAILURE);
+}

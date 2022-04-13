@@ -18,10 +18,21 @@ int main()
     char buf[10000];
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    
+    
+    int opt = 1;
+    if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))){
+        perror("setsocket");
+        exit(EXIT_FAILURE);
+    }
+
+
     memset(&servaddr, 0, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY); // htonl(inaddrany)
     servaddr.sin_port = htons(PORT);              // tcp protocol http port.
+
+
     bind(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
     printf("socket bound to port 8000");
     listen(sockfd, 5);
