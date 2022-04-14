@@ -1,0 +1,33 @@
+creating a multiple threads.(thread-1 to read from keyboard and thread-2 to read from serial port)  
+linux system has got an advance mechanism to block on multiple read/write symultaniously.
+
+linux supports a system call called as select()...
+using select() it allows to multiple read/write
+
+select system call allows a program to monitor on multiple file descriptors. for multiple reads and multiple writes
+
+here the logic is everytime check for readyness of the file descriptors for corrusponding I/O operation. it can monitor a maximum of <FD_SETSIZE(1024) value.
+
+#include<sys/select.h> //include this header file in order to use select() system call
+
+
+int select(int nfds, fd_set *readfds, fd_set *writefds,
+fd_set *exceptfds, struct timeval *timeout);
+
+nfds = number of file descriptors telling the system call to test for these many file descriptors
+timeout = it's a variable or structure of a timeout. specifies the time value for which select system call should wait(block for this much time)
+scenario: select system call will wait untill the timeout it will block, file descriptor is ready for a read or write operation, when it's interrupted by a signal.
+NOTE: if no file descriptors are read/write then it will wait for certain timeout and returns 0, in case of failure returns -1, on succcess returns the number of file descriptors that performed read/write operation successfully.
+
+void FD_CLR(int fd, fd_set *set);
+int FD_ISSET(int fd, fd_set *set);
+void FD_SET(int fd, fd_set *set); it's a datatype that holds multiple file descriptors. first pointer is testing for readyness of read operation, second pointer is to testing for readyness of write operation. testing for a file descriptor for error pending issue
+void FD_ZERO(fd_set *set);
+
+select system call depends upon a data structure called fd_set that deals with multiple file descriptors. We can create a fd_set variable like:
+fd_set var_name. We can set the file descriptors to zero using function like macro called FD_ZERO
+
+we have got FD_SET macro function that is used to set any one file descriptor of a FD_SET and that FD_SET can be belong to read/write/error
+
+FD_ISSET checks that particular FD is set or not.
+

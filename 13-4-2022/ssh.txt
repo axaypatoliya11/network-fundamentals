@@ -1,0 +1,13 @@
+$ssh which
+$apt search open ssh-client
+$ssh user@[ip address] //connects to the remote system
+$scp filename_you_want_to_share user@[ip address]
+
+ssh client will allows you to connect to the remote servers
+
+
+ssh : used to connect two remote machines over the network and controlling the other machine like a other machine. ssh is a TCP/IP protocol which uses
+port number 22
+scp : used to securely copy/transfer files over the network . scp using the secured ssh protocol
+
+after establishing connection b/w ssh server and client ssh provides strong encryption and algorithms to protect data exchange b/w client and server
