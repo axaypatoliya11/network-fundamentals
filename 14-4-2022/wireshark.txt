@@ -1,0 +1,27 @@
+wireshark is a free open source. using wireshark tools we can capture incoming and outgoing packets in real time. and captured information can be used for network troubleshooting, doagnosis purpose and software development and packet analysis.
+
+wireshark look at our packet moment can analyse packets of 100 different protocol. if a new protocol is released in the market will get updated to it. here the logic is we capture the packet live and examine offline. 
+
+core componenets and structure of WIRESHARK:
+under View: 1)Main tollbar
+            2)Filter tollbar
+            3)Status bar
+            --all of these 3 are provided by default
+
+1)Starting a new session
+
+capture option
+
+ip packet : not only packet but also ip metadata
+Each ip packet contains ip headers(20-24 bytes) + actual data to send.
+ip metadata has source and dest ip address and also some routing information
+
+
+IP metadata - each IP packet contains IP headers(20-24 bytes) + actual data to send.
+IP address have source and destination packet to transfer/routing data.
+frame protocol is used by the wireshark which is base for all protocols.
+
+
+capturing of network data packets access and viewed by all network devices in the network. that is capturing the packets that are going through other interfaces by data.
+
+filter types: display filter and capture filter. 
